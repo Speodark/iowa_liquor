@@ -1,0 +1,22 @@
+{
+    "python.formatting.provider": "black",
+    "favorites.resources": [
+        {
+            "filePath": "callbacks",
+            "group": "Default"
+        },
+        {
+            "filePath": "components",
+            "group": "Default"
+        },
+        {
+            "filePath": "app.py",
+            "group": "Default"
+        },
+        {
+            "filePath": "pages",
+            "group": "Default"
+        }
+    ],
+    "favorites.sortOrder": "ASC"
+}
