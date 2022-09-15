@@ -94,11 +94,11 @@ body {
   z-index: 1040; }
 
 .card {
-  background-color: #fff;
+  background-color: #323259;
+  border: 0.25rem solid #13132b;
   height: 100%;
   width: 100%;
-  border-radius: 3px;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   overflow: hidden; }
   .card__header {
     font-size: inherit;
@@ -158,6 +158,36 @@ body {
     height: 100%;
     border-radius: 25px;
     background-color: transparent; }
+
+.analytic-card {
+  display: grid;
+  grid-template-rows: 2rem 2rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding-top: 1.2rem; }
+  .analytic-card__name {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding-left: 0.8rem; }
+  .analytic-card__amount {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding-left: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5rem; }
+  .analytic-card__progress {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-right: 0.8rem;
+    text-align: right; }
+  .analytic-card__graph {
+    grid-row: 3/4;
+    grid-column: 1/3; }
 
 .header {
   background-color: #323259;
@@ -274,8 +304,9 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-  grid-template-rows: 6rem repeat(4, 1fr); }
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  grid-template-rows: 6rem 14rem 14rem 8rem minmax(0, 1fr);
+  grid-gap: 7rem; }
   .main__dropdown--container {
     display: flex;
     align-items: center; }
@@ -288,6 +319,10 @@ body {
       font-size: 2.2rem;
       font-weight: 500;
       width: 11rem; }
+      .main__dropdown--container .dash-dropdown .is-focused:not(.is-open) > .Select-control {
+        background-color: #323259;
+        border-color: #a16eff;
+        box-shadow: none; }
       .main__dropdown--container .dash-dropdown .Select-control {
         cursor: pointer;
         background-color: #252547;
@@ -295,9 +330,6 @@ body {
         .main__dropdown--container .dash-dropdown .Select-control:hover {
           background-color: #1b1b38;
           border: 1px solid #2e1d40; }
-        .main__dropdown--container .dash-dropdown .Select-control:focus {
-          background-color: #323259;
-          border-color: #a16eff; }
         .main__dropdown--container .dash-dropdown .Select-control .Select-value-label {
           color: #fff !important; }
       .main__dropdown--container .dash-dropdown .Select-menu-outer {
@@ -311,9 +343,27 @@ body {
           font-weight: 600; }
   .main__year {
     grid-row: 1/2;
-    grid-column: 3/5;
+    grid-column: 5/9;
     justify-self: center; }
   .main__last {
     grid-row: 1/2;
-    grid-column: 7/9;
+    grid-column: 13/17;
     justify-self: center; }
+  .main__sales {
+    grid-row: 2/3;
+    grid-column: 1/5; }
+  .main__profit {
+    grid-row: 2/3;
+    grid-column: 9/13; }
+  .main__consumption {
+    grid-row: 2/3;
+    grid-column: 17/21; }
+  .main__stores {
+    grid-row: 3/4;
+    grid-column: 1/5; }
+  .main__vendors {
+    grid-row: 3/4;
+    grid-column: 17/21; }
+  .main__revenue-cost {
+    grid-row: 3/6;
+    grid-column: 5/17; }
